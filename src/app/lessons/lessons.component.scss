@@ -1,5 +1,5 @@
-@import "../../styles/button";
-@import "../../styles/forms";
+@import '../../styles/button';
+@import '../../styles/forms';
 
 @include buttonStyles();
 @include formStyles();
@@ -41,11 +41,9 @@
     border-bottom: none;
   }
 
-  th, td {
+  th,
+  td {
     padding: 10px;
     text-align: left;
   }
 }
-
-
-

@@ -10,12 +10,18 @@ import { toObservable, toSignal, outputToObservable, outputFromObservable } from
 
 @Component({
   selector: 'home',
-  imports: [MatTabGroup, MatTab, CoursesCardListComponent],
+  imports: [MatTabGroup, MatTab],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   counter = signal(0);
+
+  constructor() {
+    effect(() => {
+      console.log(`counter value: ${this.counter()}`);
+    });
+  }
 
   increment() {
     this.counter.update((c) => c + 1);
